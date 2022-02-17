@@ -1,0 +1,28 @@
+nav {
+  display: flex;
+  height: 40px;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  left: calc(50% - 138px);
+  position: absolute;
+  width: auto;
+  background-color: darkseagreen;
+  z-index: 3;
+  padding: 0 10px;
+}
+
+a {
+  text-transform: uppercase;
+  padding: 20px 20px 15px 20px;
+  text-decoration: none;
+  z-index: 4;
+  background-color: skyblue;
+  font-weight: 600;
+}
+
+a:hover,
+.active {
+  background-color: coral;
+  text-decoration: underline;
+}

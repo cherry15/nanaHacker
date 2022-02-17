@@ -1,0 +1,64 @@
+.home {
+  background: plum;
+  font-size: 18px;
+}
+
+.container {
+  max-width: 640px;
+  padding: 0 30px;
+}
+
+q {
+  margin: 0;
+}
+
+.quote {
+  font-size: 16px;
+  margin-right: 10px;
+  color: var(--red);
+} 
+
+.quote.endQuote {
+  margin-left: 10px;
+}
+
+q::before {
+  content: none;
+}
+q::after {
+  content: none;
+}
+
+.citation {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+@media screen and (min-width: 390px) {
+  .home {
+    font-size: 32px;
+  }
+}
+
+@media screen and (min-width: 667px) {
+  .home {
+    font-size: 16px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .citation {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .home {
+    font-size: 40px;
+  }
+
+  .citation {
+    font-size: 14px;
+  }
+}
