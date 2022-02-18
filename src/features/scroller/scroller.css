@@ -1,0 +1,29 @@
+.next,
+.prev {
+  top: calc(50% - 30px);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 60px;
+  z-index: 2;
+  border: none;
+  background: none;
+  color: white;
+  padding: 0;
+  margin: 0;
+  width: 60px;
+  height: 60px;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev {
+  left: 10px;
+}
+

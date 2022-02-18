@@ -4,7 +4,7 @@ nav {
   gap: 15px;
   align-items: center;
   justify-content: center;
-  left: calc(50% - 138px);
+  left: calc(50% - 150px);
   position: absolute;
   width: auto;
   background-color: darkseagreen;
@@ -25,4 +25,15 @@ a:hover,
 .active {
   background-color: coral;
   text-decoration: underline;
+}
+
+a.logo {
+  height: 55px;
+  padding: 0 5px;
+  background-color: darkseagreen;
+}
+
+a.logo.active,
+a.logo:hover {
+  background-color: coral;
 }

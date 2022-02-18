@@ -1,6 +1,10 @@
 .home {
-  background: plum;
   font-size: 18px;
+  background: plum;
+  background-image: url(home.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background: plum url(home.svg) no-repeat cover; */
 }
 
 .container {
@@ -13,9 +17,8 @@ q {
 }
 
 .quote {
-  font-size: 16px;
+  font-size: 22px;
   margin-right: 10px;
-  color: var(--red);
 } 
 
 .quote.endQuote {
@@ -57,6 +60,10 @@ q::after {
   .home {
     font-size: 40px;
   }
+
+  .quote {
+    font-size: 46px;
+  } 
 
   .citation {
     font-size: 14px;
