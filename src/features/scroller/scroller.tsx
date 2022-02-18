@@ -80,8 +80,8 @@ export const Scroller = () => {
           {quotes[quoteIndex]}
         </motion.div>
       </AnimatePresence>
-      <button className="next" onClick={() => paginate(1)}>&#8250;</button>
-      <button className="prev" onClick={() => paginate(-1)}>&#8249;</button>
+      <button className="next" onClick={() => paginate(1)} aria-label="Next">&#8250;</button>
+      <button className="prev" onClick={() => paginate(-1)} aria-label="Previous">&#8249;</button>
     </>
   )
 }
