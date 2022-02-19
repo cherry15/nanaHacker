@@ -1,7 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import './about.css'
-import { Scroller } from '../../features/scroller/scroller'
 
 export const About = () => {
   return (
@@ -13,9 +12,6 @@ export const About = () => {
     >
       <div className={`page about`}>
         <h1>About</h1>
-        <div className="scroller-container">
-          <Scroller />
-        </div>
       </div>
     </motion.div>
   )

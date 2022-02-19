@@ -13,16 +13,6 @@ export const Home = () => {
     >
       <div className={`page ${styles.home}`}>
         <Scroller />
-        {/* <div className={styles.container}>
-        <q>
-          We like to think of our champions and idols as superheroes who were
-          born different from us. We don't like to think of them as relatively
-          ordinary people who made themselves extraordinary.
-        </q>
-        <p className={styles.citation}>
-          Carol Dweck, Mindset: The New Psychology of Success
-        </p>
-      </div> */}
       </div>
     </motion.div>
   )

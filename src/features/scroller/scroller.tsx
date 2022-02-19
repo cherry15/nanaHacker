@@ -17,7 +17,7 @@ const swipePower = (offset: number, velocity: number) => {
 export const Scroller = () => {
   const getMaxWidth = (): number => {
     const max = 660
-    if(window.screen.availWidth < max) {
+    if (window.screen.availWidth < max) {
       return window.screen.availWidth - offsetWidth
     } else {
       return max
@@ -27,7 +27,7 @@ export const Scroller = () => {
   const [[page, direction], setPage] = useState([0, 0])
   const [maxWidth, setMaxWidth] = useState(getMaxWidth())
   const styles: ScrollerStyles = {
-    width: maxWidth
+    width: maxWidth,
   }
   const variants = {
     enter: (direction: number) => {
@@ -61,9 +61,21 @@ export const Scroller = () => {
 
   return (
     <>
+      <div className="scroller-button-container">
+        <button
+          className="next"
+          onClick={() => paginate(1)}
+          aria-label="Next"
+        />
+        <button
+          className="prev"
+          onClick={() => paginate(-1)}
+          aria-label="Previous"
+        />
+      </div>
       <AnimatePresence initial={false} custom={direction}>
         <motion.div
-          className="scroller-outer-container"
+          className="scroller-container"
           style={styles}
           key={page}
           custom={direction}
@@ -88,22 +100,12 @@ export const Scroller = () => {
             }
           }}
         >
-          <div className="scroller-container" style={styles}>
-            <q style={styles}>{quotes[quoteIndex].content}</q>
-            <p className="citation" style={styles}>{quotes[quoteIndex].reference}</p>
-          </div>
+          <q style={styles}>{quotes[quoteIndex].content}</q>
+          <p className="citation" style={styles}>
+            {quotes[quoteIndex].reference}
+          </p>
         </motion.div>
       </AnimatePresence>
-      <button
-        className="next"
-        onClick={() => paginate(1)}
-        aria-label="Next"
-      />
-      <button
-        className="prev"
-        onClick={() => paginate(-1)}
-        aria-label="Previous"
-      />
     </>
   )
 }

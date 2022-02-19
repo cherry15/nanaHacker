@@ -10,7 +10,7 @@ export const Code = () => {
       exit={{ x: '100%' }}
       transition={{duration: .2}}
     >
-      <div className={`page code`}>
+      <div className="page code">
         <h1>Code</h1>
       </div>
     </motion.div>
