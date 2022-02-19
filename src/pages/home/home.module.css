@@ -4,32 +4,33 @@
   background-image: url(home.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  /* background: plum url(home.svg) no-repeat cover; */
 }
 
 .container {
   max-width: 640px;
   padding: 0 30px;
+  position: relative;
 }
 
 q {
   margin: 0;
 }
 
-.quote {
-  font-size: 22px;
-  margin-right: 10px;
-} 
-
-.quote.endQuote {
-  margin-left: 10px;
+q::before,
+q::after {
+  display: inline-flex;
+  content: '';
+  background-size: 20px 20px;
+  height: 20px;
+  width: 20px;
 }
 
 q::before {
-  content: none;
+  background-image: url('./quote-start.svg');
 }
+
 q::after {
-  content: none;
+  background-image: url('./quote-end.svg');
 }
 
 .citation {
@@ -61,9 +62,17 @@ q::after {
     font-size: 40px;
   }
 
-  .quote {
-    font-size: 46px;
-  } 
+  q::before {
+    background-size: 40px 40px;
+    height: 40px;
+    width: 40px;
+  }
+  
+  q::after {
+    background-size: 40px 40px;
+    height: 40px;
+    width: 40px;
+  }
 
   .citation {
     font-size: 14px;

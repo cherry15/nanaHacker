@@ -4,6 +4,8 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { wrap } from 'popmotion'
 import { quotes } from './quotes-data'
 import './scroller.css'
+import {ReactComponent as Next} from './next.svg'
+import {ReactComponent as Previous} from './previous.svg'
 
 const variants = {
   enter: (direction: number) => {
@@ -80,8 +82,8 @@ export const Scroller = () => {
           {quotes[quoteIndex]}
         </motion.div>
       </AnimatePresence>
-      <button className="next" onClick={() => paginate(1)} aria-label="Next">&#8250;</button>
-      <button className="prev" onClick={() => paginate(-1)} aria-label="Previous">&#8249;</button>
+      <button className="next" onClick={() => paginate(1)} aria-label="Next"><Next /></button>
+      <button className="prev" onClick={() => paginate(-1)} aria-label="Previous"><Previous /></button>
     </>
   )
 }
