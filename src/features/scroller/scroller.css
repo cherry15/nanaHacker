@@ -17,11 +17,68 @@
   height: 40px;
 }
 
+.next:focus,
+.prev:focus {
+  outline: 2px yellow solid;
+}
 .next {
   right: 10px;
+  /* background-image: url('./next.svg'); */
 }
 
 .prev {
   left: 10px;
+  /* background-image: url('./previous.svg'); */
 }
+
+.scroller-outer-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroller-container {
+  padding: 0 30px;
+  position: absolute;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
+q {
+  margin: 0;
+}
+
+q::before,
+q::after {
+  display: inline-flex;
+  content: '';
+  background-size: 20px 20px;
+  height: 20px;
+  width: 20px;
+}
+
+q::before {
+  background-image: url('./quote-start.svg');
+}
+
+q::after {
+  background-image: url('./quote-end.svg');
+}
+
+.citation {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+@media screen and (min-width: 667px) {
+  .scroller-container {
+    font-size: 36px;
+  }
+}
+
 

@@ -6,7 +6,7 @@
   background-position: left;
 }
 
-.scroller-container {
+/* .scroller-container {
   width: 295px;
   height: 295px;
   position: relative;
@@ -14,7 +14,7 @@
   justify-content: center;
   align-items: center;
   background-color: brown;
-}
+} */
 
 /* .scroller-container .next,
 .scroller-container .prev {
@@ -41,10 +41,10 @@
   transform: scale(-1);
 } */
 
-.scroller-container div {
+/* .scroller-container div {
   position: absolute;
   max-width: 295px;
-}
+} */
 
 /* .refresh {
   padding: 10px;

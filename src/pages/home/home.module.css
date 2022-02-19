@@ -4,9 +4,13 @@
   background-image: url(home.svg);
   background-repeat: no-repeat;
   background-size: cover;
+  /* position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center; */
 }
 
-.container {
+/* .container {
   max-width: 640px;
   padding: 0 30px;
   position: relative;
@@ -36,7 +40,7 @@ q::after {
 .citation {
   font-size: 18px;
   margin-top: 10px;
-}
+} */
 
 @media screen and (min-width: 390px) {
   .home {
@@ -52,9 +56,9 @@ q::after {
     justify-content: center;
   }
 
-  .citation {
+  /* .citation {
     font-size: 14px;
-  }
+  } */
 }
 
 @media screen and (min-width: 1200px) {
@@ -62,7 +66,7 @@ q::after {
     font-size: 40px;
   }
 
-  q::before {
+  /* q::before {
     background-size: 40px 40px;
     height: 40px;
     width: 40px;
@@ -76,5 +80,5 @@ q::after {
 
   .citation {
     font-size: 14px;
-  }
+  } */
 }

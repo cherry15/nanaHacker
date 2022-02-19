@@ -4,48 +4,55 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { wrap } from 'popmotion'
 import { quotes } from './quotes-data'
 import './scroller.css'
-import {ReactComponent as Next} from './next.svg'
-import {ReactComponent as Previous} from './previous.svg'
 
-const variants = {
-  enter: (direction: number) => {
-    return {
-      x: direction > 0 ? 240 : -240,
-      opacity: 0,
-    }
-  },
-  center: {
-    zIndex: 1,
-    x: 0,
-    opacity: 1,
-  },
-  exit: (direction: number) => {
-    return {
-      zIndex: 0,
-      x: direction < 0 ? 240 : -240,
-      opacity: 0,
-    }
-  },
+interface ScrollerStyles {
+  width: number
 }
 
-/**
- * Experimenting with distilling swipe offset and velocity into a single variable, so the
- * less distance a user has swiped, the more velocity they need to register as a swipe.
- * Should accomodate longer swipes and short flicks without having binary checks on
- * just distance thresholds and velocity > 0.
- */
 const swipeConfidenceThreshold = 10000
 const swipePower = (offset: number, velocity: number) => {
   return Math.abs(offset) * velocity
 }
 
 export const Scroller = () => {
+  const getMaxWidth = (): number => {
+    const max = 660
+    if(window.screen.availWidth < max) {
+      return window.screen.availWidth - offsetWidth
+    } else {
+      return max
+    }
+  }
+  const offsetWidth = 70
   const [[page, direction], setPage] = useState([0, 0])
+  const [maxWidth, setMaxWidth] = useState(getMaxWidth())
+  const styles: ScrollerStyles = {
+    width: maxWidth
+  }
+  const variants = {
+    enter: (direction: number) => {
+      return {
+        x: direction > 0 ? maxWidth : -maxWidth,
+        opacity: 0,
+      }
+    },
+    center: {
+      zIndex: 1,
+      x: 0,
+      opacity: 1,
+    },
+    exit: (direction: number) => {
+      return {
+        zIndex: 0,
+        x: direction < 0 ? maxWidth : -maxWidth,
+        opacity: 0,
+      }
+    },
+  }
 
-  // We only have 3 quotes, but we paginate them absolutely (ie 1, 2, 3, 4, 5...) and
-  // then wrap that within 0-2 to find our image ID in the array below. By passing an
-  // absolute page index as the `motion` component's `key` prop, `AnimatePresence` will
-  // detect it as an entirely new image. So you can infinitely paginate as few as 1 quotes.
+  window.onresize = () => {
+    setMaxWidth(getMaxWidth())
+  }
   const quoteIndex = wrap(0, quotes.length, page)
 
   const paginate = (newDirection: number) => {
@@ -56,6 +63,8 @@ export const Scroller = () => {
     <>
       <AnimatePresence initial={false} custom={direction}>
         <motion.div
+          className="scroller-outer-container"
+          style={styles}
           key={page}
           custom={direction}
           variants={variants}
@@ -79,11 +88,22 @@ export const Scroller = () => {
             }
           }}
         >
-          {quotes[quoteIndex]}
+          <div className="scroller-container" style={styles}>
+            <q style={styles}>{quotes[quoteIndex].content}</q>
+            <p className="citation" style={styles}>{quotes[quoteIndex].reference}</p>
+          </div>
         </motion.div>
       </AnimatePresence>
-      <button className="next" onClick={() => paginate(1)} aria-label="Next"><Next /></button>
-      <button className="prev" onClick={() => paginate(-1)} aria-label="Previous"><Previous /></button>
+      <button
+        className="next"
+        onClick={() => paginate(1)}
+        aria-label="Next"
+      />
+      <button
+        className="prev"
+        onClick={() => paginate(-1)}
+        aria-label="Previous"
+      />
     </>
   )
 }
