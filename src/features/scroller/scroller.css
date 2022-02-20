@@ -34,12 +34,12 @@
 }
 
 .next {
-  right: 1px;
+  right: 3px;
   background-image: url('./next.svg');
 }
 
 .prev {
-  left: 0;
+  left: 2px;
   background-image: url('./previous.svg');
 }
 

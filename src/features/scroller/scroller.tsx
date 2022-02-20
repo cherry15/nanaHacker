@@ -23,7 +23,7 @@ export const Scroller = () => {
       return max
     }
   }
-  const offsetWidth = 70
+  const offsetWidth = 40
   const [[page, direction], setPage] = useState([0, 0])
   const [maxWidth, setMaxWidth] = useState(getMaxWidth())
   const styles: ScrollerStyles = {
