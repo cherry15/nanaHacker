@@ -8,9 +8,9 @@ export const quotes: Quote[] = [
   {
     id: 1,
     content: `According to a global software developer survey in 2021, the vast majority of developers are males, 
-    accounting for 91.7 percent of all respondents. Female developers amounted to only five percent of all respondents, 
+    accounting for 91.7 percent of all respondents. Female developers were only 5 percent of all respondents, 
     demonstrating the male-dominating reality of software development jobs.`,
-    reference: 'https://www.statista.com/statistics/1126823/worldwide-developer-gender'
+    reference: 'https://www.statista.com'
   }, {
     id: 2,
     content: `We like to think of our champions and idols as superheroes who were
