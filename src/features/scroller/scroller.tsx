@@ -2,12 +2,14 @@ import React from 'react'
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { wrap } from 'popmotion'
-import { quotes } from './quotes-data'
+import { getQuotes, Quote } from './quotes-data'
 import './scroller.css'
 
 interface ScrollerStyles {
   width: number
 }
+
+const quotes: Quote[] = getQuotes()
 
 const swipeConfidenceThreshold = 10000
 const swipePower = (offset: number, velocity: number) => {

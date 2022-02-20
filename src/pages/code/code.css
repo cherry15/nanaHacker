@@ -1,7 +1,7 @@
 @import '../../styles//variables.css';
 
 .code {
-  background: goldenrod;
+  background-color: goldenrod;
   background-image: url(code.svg);
   background-repeat: no-repeat;
   background-size: cover;
