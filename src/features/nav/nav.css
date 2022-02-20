@@ -1,12 +1,12 @@
 nav {
   display: flex;
   height: 40px;
-  gap: 15px;
+  gap: 10px;
   align-items: center;
   justify-content: center;
-  left: calc(50% - 150px);
+  left: calc(50% - 127.18px);
   position: absolute;
-  width: auto;
+  width: 254px;
   background-color: darkseagreen;
   z-index: 3;
   padding: 0 10px;
@@ -15,6 +15,7 @@ nav {
 a {
   text-transform: uppercase;
   padding: 20px 20px 15px 20px;
+  padding: 20px 10px 15px;
   text-decoration: none;
   z-index: 4;
   background-color: skyblue;
@@ -29,6 +30,7 @@ a:hover,
 
 a.logo {
   height: 55px;
+  width: 55px;
   padding: 0 5px;
   background-color: darkseagreen;
 }

@@ -16,8 +16,8 @@ const swipePower = (offset: number, velocity: number) => {
 
 export const Scroller = () => {
   const getMaxWidth = (): number => {
-    const max = 660
-    if (window.screen.availWidth < max) {
+    const max = 667
+    if (window.screen.availWidth <= max) {
       return window.screen.availWidth - offsetWidth
     } else {
       return max
@@ -100,8 +100,8 @@ export const Scroller = () => {
             }
           }}
         >
-          <q style={styles}>{quotes[quoteIndex].content}</q>
-          <p className="citation" style={styles}>
+          <q>{quotes[quoteIndex].content}</q>
+          <p className="citation">
             {quotes[quoteIndex].reference}
           </p>
         </motion.div>

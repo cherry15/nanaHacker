@@ -1,6 +1,6 @@
 .scroller-button-container {
   display: flex;
-  width: 370px;
+  width: 334px;
   position: absolute;
   top: 0;
 }
@@ -34,7 +34,7 @@
 }
 
 .next {
-  right: 6px;
+  right: 1px;
   background-image: url('./next.svg');
 }
 
@@ -51,7 +51,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 24px;
+  font-size: 18px;
 }
 
 q {
