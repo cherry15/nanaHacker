@@ -17,7 +17,7 @@ export const About = () => {
           angular2, frontend architecture, building
           re-usable components, accessibility standards, coding standards, CSS
           modules, SASS, JSON, consuming and creating RESTful APIs. I also
-          have experience of backend technologies using nodejs, expressjs mongodb, PHP and Java.
+          have experience of nodejs, expressjs mongodb, PHP and Java.
         </p>
       </section>
     </div>
