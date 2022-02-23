@@ -13,12 +13,11 @@ export const About = () => {
           the public and private sectors.
         </p>
         <p>
-          I am proficient at typescript, javascript, es6, vue2/3, jest, react, axios/redux and state management,
-          angular2+, frontend architecture, building
+          I am proficient at typescript, javascript, es6, vue, jest, react, axios/redux and state management,
+          angular2, frontend architecture, building
           re-usable components, accessibility standards, coding standards, CSS
-          modules, SASS, CSS, JSON, consuming and creating RESTful APIs with SPAs. I also
-          have experience of backend technologies using nodejs, expressjs and
-          mongodb. Other backend technologies I have used are PHP and Java.
+          modules, SASS, JSON, consuming and creating RESTful APIs. I also
+          have experience of backend technologies using nodejs, expressjs mongodb, PHP and Java.
         </p>
       </section>
     </div>
