@@ -31,7 +31,7 @@ a:hover,
 a.logo {
   height: 55px;
   width: 55px;
-  padding: 0 5px;
+  padding: 0;
   background-color: darkseagreen;
 }
 

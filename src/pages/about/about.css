@@ -5,3 +5,9 @@
   background-size: cover;
   background-position: left;
 }
+
+.about .me {
+  position: absolute;
+  top: -20px;
+  right: -50px;
+}
