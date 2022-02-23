@@ -3,16 +3,22 @@ import { motion } from 'framer-motion'
 import './code.css'
 
 export const Code = () => {
+  const [isActive, setIsActive] = React.useState(false)
+  const openGithub = (): void => {
+    window.open('https://github.com/cherry15/cc2022react')
+  }
   return (
-    // <motion.div
-    // initial={{ opacity: 0, backgroundColor: '#DAA520' }}
-    // animate={{ opacity: 1, backgroundColor: '#DAA520' }}
-    // exit={{ opacity: 0, backgroundColor: '#DAA520' }}
-    //   transition={{ duration: 0.5 }}
-    // >
-      <div className="page code">
-        <h1>Code</h1>
-      </div>
-    // {/* </motion.div> */}
+    <div className="page code">
+      <motion.div
+        className="github"
+        onClick={() => setIsActive(!isActive)}
+        animate={{
+          rotate: isActive ? 90 : 270,
+        }}
+      ></motion.div>
+      <button onClick={openGithub} className="button-github">
+        Code
+      </button>
+    </div>
   )
 }

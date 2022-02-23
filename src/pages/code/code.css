@@ -1,9 +1,26 @@
 @import '../../styles//variables.css';
 
 .code {
-  background-color: goldenrod;
+  background-color: var(--yellow);
   background-image: url(code.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
+}
+
+.code .github {
+  width: 120px;
+  height: 120px;
+  background-image: url(github.png);
+  cursor: pointer;
+}
+
+.code .button-github {
+  background: none;
+  border: none;
+  font-size: 2em;
+  color: white;
+  font-family: var(--font);
+  font-weight: bold;
+  cursor: pointer;
 }
