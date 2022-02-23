@@ -9,7 +9,7 @@
 .about .me {
   position: absolute;
   top: -20px;
-  right: -60px;
+  right: -40px;
 }
 
 .about section {
@@ -18,7 +18,7 @@
 }
 
 .about section .first-para {
-  max-width: 500px;
+  max-width: 450px;
 }
 
 @media only screen and (min-width: 900px) {
