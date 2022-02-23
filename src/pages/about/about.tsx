@@ -14,10 +14,10 @@ export const About = () => {
         </p>
         <p>
           I am proficient at typescript, javascript, es6, vue, jest, react, axios/redux and state management,
-          angular2, frontend architecture, building
+          angular, frontend architecture, building
           re-usable components, a11y, coding standards, CSS
           modules, SASS, JSON, consuming and creating RESTful APIs. I also
-          have experience of nodejs, expressjs mongodb, PHP and Java.
+          have experience of nodejs, expressjs, mongodb, PHP and Java.
         </p>
       </section>
     </div>
