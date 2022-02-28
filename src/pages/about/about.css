@@ -21,7 +21,7 @@
   max-width: 450px;
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 667px) {
   .about section .first-para {
     max-width: 660px;
   }

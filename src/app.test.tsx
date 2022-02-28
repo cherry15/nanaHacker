@@ -1,9 +1,23 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import App from './app';
+import React from 'react'
+import { MemoryRouter } from 'react-router-dom'
+import { render, screen } from '@testing-library/react'
+import App from './app'
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+describe('app', () => {
+  it('renders the right links', () => {
+    render(
+      <MemoryRouter initialEntries={['/']}>
+        <App></App>
+      </MemoryRouter>
+    )
+
+    const aboutLink = screen.getByText(/ABOUT/i)
+    expect(aboutLink).toBeInTheDocument()
+
+    const codeLink = screen.getByText(/CODE/i)
+    expect(codeLink).toBeInTheDocument()
+
+    const homeLink = screen.getByLabelText(/Home/i)
+    expect(homeLink).toBeInTheDocument()
+  })
+})
