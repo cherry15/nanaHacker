@@ -11,13 +11,13 @@ describe('app', () => {
       </MemoryRouter>
     )
 
-    const aboutLink = screen.getByText(/ABOUT/i)
+    const aboutLink = screen.getByText(/about/i)
     expect(aboutLink).toBeInTheDocument()
 
-    const codeLink = screen.getByText(/CODE/i)
+    const codeLink = screen.getByText(/code/i)
     expect(codeLink).toBeInTheDocument()
 
-    const homeLink = screen.getByLabelText(/Home/i)
+    const homeLink = screen.getByLabelText(/home/i)
     expect(homeLink).toBeInTheDocument()
   })
 })
