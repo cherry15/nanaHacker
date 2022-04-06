@@ -1,7 +1,7 @@
 # Getting Started with Nana Hacker
 
 The purpose of this project is to promote myself and experiment with Framer motion. 
-This project is was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
